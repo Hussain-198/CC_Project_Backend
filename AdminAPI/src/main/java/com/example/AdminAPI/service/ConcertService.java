@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Locale;
 import java.util.Optional;
 
 @Service
@@ -15,15 +14,17 @@ public class ConcertService {
     @Autowired
     private ConcertRepository concertRepository;
 
-    public List<Concert> getALlConcerts() {
+    public List<Concert> getAllConcerts() {
         return concertRepository.findAll();
     }
 
     public Optional<Concert> getConcertById(Long id) {
+
         return concertRepository.findById(id);
     }
 
     public Concert addConcert(Concert concert) {
+
         return concertRepository.save(concert);
     }
 

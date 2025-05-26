@@ -21,7 +21,7 @@ public class ConcertController {
 
     @GetMapping
     public ResponseEntity<List<Concert>> getAllConcerts() {
-        List<Concert> concerts = concertService.getALlConcerts();
+        List<Concert> concerts = concertService.getAllConcerts();
         return new ResponseEntity<>(concerts, HttpStatus.OK);
     }
 
